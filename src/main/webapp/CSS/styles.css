@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3e5ab; /* Light coffee color */
+}
+
+h1 {
+    color: #3e2723; /* Dark coffee color */
+    margin-bottom: 1rem;
+}
+
+.coffee-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    grid-gap: 1rem;
+    padding: 1rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.coffee {
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns label and input to the start of the flex container */
+}
+
+.coffee label,
+.total input[type="text"] {
+    width: 100px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+.submit button {
+    padding: 10px 15px; /* Padding for a larger clickable area */
+    font-size: 1rem; /* Font size for readability */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.submit button:hover {
+    background-color: #5d4037; /* A slightly darker coffee color on hover */
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.total, .submit {
+    width: auto; /* Let the size be determined by the content */
+    margin: 1rem auto; /* Auto margins for horizontal centering */
+    text-align: center; /* Center-align the text inside the div */
+}

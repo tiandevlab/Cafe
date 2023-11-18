@@ -1,5 +1,5 @@
 function calculateTotal() {
-    var coffeeTypes = ['cappuccino', 'latte', 'mocha', 'americano', 'macchiato', 'flat white', 'espresso', 'doppio'];
+    var coffeeTypes = ['cappuccino', 'latte', 'mocha', 'americano', 'macchiato', 'flatWhite', 'espresso', 'doppio'];
     var total = 0;
 
     coffeeTypes.forEach(function(coffee) {

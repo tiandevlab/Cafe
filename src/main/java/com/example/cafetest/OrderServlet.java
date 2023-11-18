@@ -56,7 +56,7 @@ public class OrderServlet extends HttpServlet {
                 int rowAffected = preparedStatement.executeUpdate();
                 if (rowAffected > 0) {
                     // Redirect to a confirmation page
-                    response.sendRedirect("orderConfirmation.jsp");
+                    response.sendRedirect("OrderConfirmation.jsp");
                 } else {
                     // Handle the case where the insert fails
                     response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error processing order");

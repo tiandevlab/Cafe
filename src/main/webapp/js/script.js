@@ -7,8 +7,9 @@ function calculateTotal() {
         total += quantity * 3; // Each coffee costs 3€
     });
 
-    document.getElementById('totalPrice').value = total.toFixed(2) + '€';
+    // Ensure we are setting a numeric value only
+    document.getElementById('totalPrice').value = total.toFixed(2);
 
-    // Prevent form submission for demonstration purposes
-    return false;
+    // Return true to allow form submission
+    return true;
 }

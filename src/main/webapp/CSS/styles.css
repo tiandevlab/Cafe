@@ -50,10 +50,15 @@ h1 {
     width: 100%;
     max-width: 300px;
 }
+
 .submit button {
     padding: 10px 15px; /* Padding for a larger clickable area */
     font-size: 1rem; /* Font size for readability */
     border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to indicate clickable */
+    border: none; /* Removes border */
+    background-color: #a1887f; /* Coffee color */
+    color: white; /* Text color */
 }
 
 .submit button:hover {
@@ -72,4 +77,24 @@ h1 {
     width: auto; /* Let the size be determined by the content */
     margin: 1rem auto; /* Auto margins for horizontal centering */
     text-align: center; /* Center-align the text inside the div */
+}
+
+/* Additional styles for order confirmation page */
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures the container takes at least the full height of the viewport */
+    text-align: center; /* Centers text horizontally */
+}
+
+ul {
+    list-style: none; /* Removes bullet points from list */
+    padding: 0;
+    text-align: center; /* Aligns text to the center */
+}
+
+ul li {
+    margin: 5px 0; /* Spacing between list items */
 }

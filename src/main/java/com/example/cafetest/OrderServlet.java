@@ -55,8 +55,18 @@ public class OrderServlet extends HttpServlet {
 
                 int rowAffected = preparedStatement.executeUpdate();
                 if (rowAffected > 0) {
+                    // Set attributes for all coffee types
+                    request.setAttribute("cappuccinoQuantity", cappuccinoQuantity);
+                    request.setAttribute("latteQuantity", latteQuantity);
+                    request.setAttribute("mochaQuantity", mochaQuantity);
+                    request.setAttribute("americanoQuantity", americanoQuantity);
+                    request.setAttribute("macchiatoQuantity", macchiatoQuantity);
+                    request.setAttribute("flatWhiteQuantity", flatWhiteQuantity);
+                    request.setAttribute("espressoQuantity", espressoQuantity);
+                    request.setAttribute("doppioQuantity", doppioQuantity);
+                    request.setAttribute("totalPrice", totalPrice);
                     // Redirect to a confirmation page
-                    response.sendRedirect("OrderConfirmation.jsp");
+                    request.getRequestDispatcher("OrderConfirmation.jsp").forward(request,response);
                 } else {
                     // Handle the case where the insert fails
                     response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error processing order");

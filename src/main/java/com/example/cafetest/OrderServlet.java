@@ -80,20 +80,4 @@ public class OrderServlet extends HttpServlet {
         System.out.println("Total Price (before parsing): " + request.getParameter("totalPrice"));
 
     }
-
-    private int parseOrDefault(String value, int defaultValue) {
-        try {
-            return Integer.parseInt(value);
-        } catch (NumberFormatException e) {
-            return defaultValue;
-        }
-    }
-
-    private double parseOrDefault(String value, double defaultValue) {
-        try {
-            return Double.parseDouble(value);
-        } catch (NumberFormatException e) {
-            return defaultValue;
-        }
-    }
 }
